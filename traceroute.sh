@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-TRACEROUTE_HOST=ya.ru
+TRACEROUTE_HOST=$(cat /root/TRACEROUTE_HOST)
 
 if [[ -z "${TRACEROUTE_HOST}" ]]; then
   echo "Some default value because TRACEROUTE_HOST is undefined"
