@@ -1,0 +1,7 @@
+version: '2'
+services:
+  traceroute:
+    build:
+      context: .
+      args:
+        - TRACEROUTE_HOST=${TRACEROUTE_HOST}
