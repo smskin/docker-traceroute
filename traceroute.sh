@@ -10,4 +10,4 @@ START=$(date +%s)
 OUTPUT=$(traceroute -w 10 "${TRACEROUTE_HOST}")
 END=$(date +%s)
 EXECUTION_TIME=$(( $END - $START ))
-printf "{\nsignature:\"traceroute\",\ntarget:\"%s\"\nstart:%d,\nend:%d,\nexecution_time:%d,\noutput:\"%s\"\n}\n" "$TRACEROUTE_HOST" "$START" "$END" "$EXECUTION_TIME" "$OUTPUT"
+printf "{signature:\"traceroute\",target:\"%s\"start:%d,end:%d,execution_time:%d,output:\"%s\"}" "$TRACEROUTE_HOST" "$START" "$END" "$EXECUTION_TIME" "$OUTPUT"
